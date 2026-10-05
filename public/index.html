@@ -4,21 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CardLink KB</title>
-<style>
-  :root { color-scheme: light dark; }
-  body {
-    font-family: system-ui, sans-serif;
-    max-width: 640px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    line-height: 1.5;
-  }
-  h1 { margin-bottom: 0.25rem; }
-  p.sub { color: #666; margin-top: 0; }
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<header class="site">
+  <a class="brand" href="/">CardLink KB</a>
+  <nav>
+    <a href="/how-cards-work.html">How cards work</a>
+    <a href="/employee-portal.html">Employee portal</a>
+    <a href="/signing-in.html">Admin sign-in</a>
+  </nav>
+</header>
+<main>
   <h1>CardLink KB</h1>
-  <p class="sub">Under construction. Articles for employees, client admins, and MSP/reseller admins are on the way.</p>
+  <p class="lede">Plain-language guides for using and administering CardLink. Written for employees, client admins, and MSP/reseller admins — nothing here assumes technical background.</p>
+
+  <h2>For employees</h2>
+  <div class="card-grid">
+    <a class="card" href="/how-cards-work.html"><div class="title">How your card works</div><div class="desc">Taps, links, QR codes, and when a card shows "unavailable"</div></a>
+    <a class="card" href="/your-card-data.html"><div class="title">What's on your card</div><div class="desc">Where your info comes from, and what you can change</div></a>
+    <a class="card" href="/your-card-template.html"><div class="title">Choosing your template</div><div class="desc">How to pick and preview your card's look</div></a>
+    <a class="card" href="/shared-mailboxes.html"><div class="title">Shared mailboxes</div><div class="desc">Claiming and releasing a shared mailbox card</div></a>
+    <a class="card" href="/aliases.html"><div class="title">Aliases</div><div class="desc">What an alias card is and how it appears on your portal</div></a>
+    <a class="card" href="/employee-portal.html"><div class="title">Employee portal tour</div><div class="desc">Every section of the portal, explained</div></a>
+  </div>
+
+  <h2>For client admins</h2>
+  <div class="card-grid">
+    <a class="card" href="/signing-in.html"><div class="title">Signing in to the admin console</div><div class="desc">Microsoft sign-in and the authenticator step-up</div></a>
+    <a class="card" href="/why-unavailable.html"><div class="title">Why a card shows "unavailable"</div><div class="desc">Every stale reason, in plain language, and how to fix it</div></a>
+    <a class="card" href="/managing-templates.html"><div class="title">Managing templates</div><div class="desc">Domain defaults, self-service settings, and the template pool</div></a>
+    <a class="card" href="/aliases.html"><div class="title">Activating aliases</div><div class="desc">Turning a discovered alias into a real card</div></a>
+    <a class="card" href="/shared-mailboxes.html"><div class="title">Shared mailboxes (admin side)</div><div class="desc">Marking a mailbox claimable</div></a>
+  </div>
+
+  <p class="note">Don't see what you're looking for? This KB is new and growing — reach out and we'll add it.</p>
+</main>
+<footer class="site">CardLink KB — internal product detail lives elsewhere; this site is written for MSPs, client admins, and employees.</footer>
 </body>
 </html>

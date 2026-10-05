@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why a card shows "unavailable" — CardLink KB</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">CardLink KB</a>
+  <nav><a href="/">Home</a></nav>
+</header>
+<main>
+  <h1>Why a card shows "unavailable"</h1>
+  <div class="tags"><span class="tag">Client admins</span></div>
+  <p class="lede">CardLink checks every card once a day (and whenever you press "Sync now"). If a card no longer qualifies, it's marked stale and shows as unavailable until the cause is fixed and it syncs again.</p>
+
+  <h2>When this runs</h2>
+  <p>Automatically once a day, early morning. You can also trigger it on demand from your company's overview page in the admin console with <strong>Sync now</strong> — useful right after you've fixed something and don't want to wait.</p>
+
+  <h2>Every stale reason, plain language</h2>
+  <table>
+    <tr><th>What you'll see</th><th>What it means</th><th>How to fix it</th></tr>
+    <tr><td>Not in the directory</td><td>The account was deleted, or is no longer a member</td><td>Restore the account in Microsoft 365, or remove the card if it's gone for good</td></tr>
+    <tr><td>No email address</td><td>The account has no email set</td><td>Add an email address in Microsoft 365</td></tr>
+    <tr><td>Account disabled</td><td>The account is disabled in Microsoft 365</td><td>Re-enable it</td></tr>
+    <tr><td>Shared mailboxes turned off</td><td>Your company has shared-mailbox cards disabled</td><td>Turn them back on in the admin console</td></tr>
+    <tr><td>Domain not allowed</td><td>The account's email domain isn't in your Allowed Domains list</td><td>Add the domain in the admin console's settings</td></tr>
+    <tr><td>Alias not active</td><td>The alias was deactivated, aliases are off, or its domain isn't allowed</td><td>Reactivate the alias, turn aliases on, or allow its domain</td></tr>
+    <tr><td>Not returned by the last sync</td><td>Catch-all for anything else the directory didn't return</td><td>Check the account in Microsoft 365; sync again</td></tr>
+  </table>
+
+  <h2>After you fix it</h2>
+  <p>Press <strong>Sync now</strong> rather than waiting for the next automatic run — a stale flag clears the moment a sync finds the cause resolved. This is reversible both ways: a card can go stale and come back as many times as the underlying cause changes.</p>
+
+  <div class="note">Employees and portal users can't fix a stale card themselves — this always needs a client admin to resolve the underlying Microsoft 365 or CardLink setting.</div>
+
+  <h2>Removing a card for good</h2>
+  <p>If a stale card should be removed permanently rather than fixed (someone has left the company, for example), your admin console has a <strong>Purge</strong> action for that.</p>
+</main>
+<footer class="site">CardLink KB</footer>
+</body>
+</html>

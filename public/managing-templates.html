@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Managing templates — CardLink KB</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="/">CardLink KB</a>
+  <nav><a href="/">Home</a></nav>
+</header>
+<main>
+  <h1>Managing templates</h1>
+  <div class="tags"><span class="tag">Client admins</span></div>
+  <p class="lede">As a client admin, you control which templates your company uses, and whether employees get any say.</p>
+
+  <h2>How a card's template is decided</h2>
+  <p>CardLink checks these in order and uses the first match:</p>
+  <ol>
+    <li>The template the person picked for themselves (for a shared mailbox, the one its current claimant picked, or one you've assigned to the mailbox)</li>
+    <li>For shared mailboxes only: your domain's "Default for Shared Mailboxes"</li>
+    <li>Your domain's default template</li>
+    <li>The standard CardLink template</li>
+  </ol>
+  <p>If a template gets deleted, anything using it just falls through to the next one in this list.</p>
+
+  <h2>What you can set, and where</h2>
+  <table>
+    <tr><th>Setting</th><th>Where</th></tr>
+    <tr><td>Your domain's default template, and the default for shared mailboxes</td><td>Admin console, Domains tab</td></tr>
+    <tr><td>Whether employees may choose their own template, and how many they can keep</td><td>Admin console, Self-Service tab</td></tr>
+    <tr><td>Which templates are offered for employees to choose from</td><td>Admin console, Self-Service tab</td></tr>
+    <tr><td>Which templates are offered for a specific shared mailbox</td><td>Admin console, Mailboxes tab</td></tr>
+  </table>
+
+  <div class="note">A template tagged for people only can't be offered for shared mailboxes.</div>
+</main>
+<footer class="site">CardLink KB</footer>
+</body>
+</html>
