@@ -28,12 +28,17 @@
 
   <table>
     <tr><th>Section</th><th>What it's for</th></tr>
-    <tr><td>My Cards</td><td>Your own card plus any active aliases. Choose which one is Primary (what shares by default), and edit the fields you're allowed to.</td></tr>
-    <tr><td>Devices</td><td>Add a physical NFC card or badge, point it at one of your cards, label it, and switch a lost one off (or back on).</td></tr>
-    <tr><td>Shared Mailboxes</td><td>Claim or release a shared mailbox, and pick that mailbox's template.</td></tr>
-    <tr><td>Card Template</td><td>Pick your own card's template from what your admin has made available, with live previews.</td></tr>
+    <tr><td>My cards</td><td>One row per address you have — your own card, any active aliases, and any shared mailbox you've claimed. Pick which one is Primary (what shares by default), and edit the fields you're allowed to. See below for how design (template) choice works here.</td></tr>
+    <tr><td>Devices</td><td>Add a physical NFC card or badge, point it at one of your addresses (the picklist shows the name and address together), label it, and switch a lost one off (or back on).</td></tr>
+    <tr><td>Shared Mailboxes</td><td>Claim or release a shared mailbox. Once claimed, it gets its own row in My cards, where you pick its design the same way as any other address.</td></tr>
     <tr><td>Admin</td><td>Only shown if you're an admin for your company. Grant or revoke admin access for a teammate, and jump into the admin console. Every company must always have at least one admin.</td></tr>
   </table>
+
+  <h2>My cards, in detail</h2>
+  <p>Each row shows a thumbnail of the design that address is currently using, and why: your own pick, matching your main card, your company's default, or set by your admin. Press <strong>Share</strong>, <strong>Make primary</strong>, or <strong>Edit details</strong> right from the row.</p>
+  <p>Press <strong>Change design</strong> to open a gallery in place, with <strong>Company</strong>, <strong>Seasonal</strong>, and <strong>Basic</strong> filters. On an alias, you can instead choose <strong>"Use my main card's design"</strong> — it then keeps following your main card's design as that changes, rather than locking in whatever it was at the time. A tick for <strong>"Also use this design on my other addresses"</strong> applies your pick everywhere at once, skipping any address your admin has locked or where that design isn't offered.</p>
+  <p>If your admin has assigned and locked a design for an address, you'll see <strong>"Locked by your admin"</strong> there instead of a picker. If your company has turned off design changes entirely, there's no button at all — a note says so.</p>
+  <p>A <strong>"Picks used"</strong> line reads something like "You have picked 2 of 3 designs allowed" — the cap counts <em>different</em> designs across all your addresses, so the same design on two addresses only counts once. If your company's plan is about to change, an affected row shows <strong>"Leaves &lt;date&gt;"</strong> ahead of time.</p>
 
   <p>Signing out of the portal also signs you out of Microsoft in that browser.</p>
 </main>

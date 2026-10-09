@@ -28,12 +28,12 @@
   <h2>How a card's template is decided</h2>
   <p>CardLink checks these in order and uses the first match:</p>
   <ol>
-    <li>The template the person picked for themselves (for a shared mailbox, the one its current claimant picked, or one you've assigned to the mailbox)</li>
+    <li>A template you've assigned to that person, alias, or mailbox (optionally locked — see Assignments below), or the one they picked for themselves if you haven't</li>
     <li>For shared mailboxes only: your domain's "Default for Shared Mailboxes"</li>
     <li>Your domain's default template</li>
     <li>The standard CardLink template</li>
   </ol>
-  <p>If a template gets deleted, anything using it just falls through to the next one in this list.</p>
+  <p>If a template gets deleted, anything using it just falls through to the next one in this list. An alias with no pick of its own, and no assignment, follows its person's current pick instead — not the domain default — and keeps following it as that changes.</p>
 
   <h2>What you can set, and where</h2>
   <table>
@@ -42,9 +42,13 @@
     <tr><td>Whether employees may choose their own template, and how many they can keep</td><td>Admin console, Self-Service tab</td></tr>
     <tr><td>Which templates are offered for employees to choose from</td><td>Admin console, Self-Service tab</td></tr>
     <tr><td>Which templates are offered for a specific shared mailbox</td><td>Admin console, Mailboxes tab</td></tr>
+    <tr><td>Assign a specific person's, alias's, or shared mailbox's design directly, and optionally lock it so they can't change it — Studio plan only</td><td>Admin console, Assignments tab</td></tr>
   </table>
 
   <div class="note">A template tagged for people only can't be offered for shared mailboxes.</div>
+
+  <h2>Assigning and locking a design</h2>
+  <p>On the Studio plan, the <strong>Assignments</strong> tab lets you give a specific person, alias, or shared mailbox a particular design directly, and optionally lock it. A lock on a person also covers their aliases; a lock on a shared mailbox covers every current claimant. A locked employee sees "Set by your admin" in their portal instead of a picker. Each change can be undone right after you make it. See <a href="/template-availability.html">Template availability &amp; specials</a> for what each plan includes.</p>
 
   <a class="btn" href="https://admin.crdlnk.io/login">Open the admin console →</a>
 
