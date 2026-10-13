@@ -16,6 +16,10 @@ wrangler dev
 
 ## Deploy
 
+Every page's footer carries a "Last updated" date, derived from git (today's date for a file you're about to commit, otherwise its last real commit date — see `scripts/stamp-dates.mjs`). Run the stamp script **before** committing, so the stamp lands in the same commit as the content change:
+
 ```
+node scripts/stamp-dates.mjs
+git add -A && git commit -m "..."
 wrangler deploy
 ```
