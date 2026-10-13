@@ -27,7 +27,7 @@
   <p class="lede">Your card pulls most of its information straight from your company's Microsoft 365 directory, refreshed once a day.</p>
 
   <h2>From the directory (not editable by you)</h2>
-  <p>Display name, first and last name, job title, department, email, office phone, mobile phone, office location, and your profile photo all come from Microsoft 365. The directory always wins: if your IT admin updates one of these in Microsoft 365, your card updates at the next sync. You cannot override your name on your personal card — that's intentional, so nobody can impersonate someone else.</p>
+  <p>Display name, first and last name, job title, department, company name, email, business phone, mobile phone, office location, fax number, street address, city, state, postal code, country, and your profile photo all come from Microsoft 365. The directory always wins: if your IT admin updates one of these in Microsoft 365, your card updates at the next sync. You cannot override your name on your personal card — that's intentional, so nobody can impersonate someone else. A field with nothing in it simply isn't drawn.</p>
 
   <h2>What you (or your admin) can fill in</h2>
   <p>If the directory doesn't have a value for mobile phone, office location, or job title, you — or your client admin — can fill that one in yourself. The moment the directory does have a value, it takes over again.</p>
@@ -38,13 +38,17 @@
   <h2>Your photo</h2>
   <p>Your card uses your Microsoft 365 / Entra profile photo. If you need to update it, change it the same way you'd change it anywhere else tied to your Microsoft account — it will reach your card at the next sync.</p>
 
+  <h2>Your address</h2>
+  <p>Your card shows your own Microsoft 365 address by default. Your company can instead set one shared organization address that replaces everyone's address on a domain — if so, that's what your card shows instead of your own. Only a Super admin or Admin can set this (not a Billing admin or Media manager), and every change is logged.</p>
+
   <h2>What's in Save to Contacts</h2>
-  <p>Saving your card to someone's contacts carries your name, title, department, office location, phone and email, a link back to your CardLink card, your company's social profiles (if your admin has set any up — see <a href="/photo-and-logo-guidance.html">Photo and logo guidance</a>), and your photo. (How it displays depends on the phone it's saved to.)</p>
+  <p>Saving your card to someone's contacts carries your name, title, company and department, email, work and mobile phone, fax, website, address (your office location and street address), a link back to your CardLink card, your company's social profiles (if your admin has set any up — see <a href="/photo-and-logo-guidance.html">Photo and logo guidance</a>), and your photo (when it's a JPEG, PNG, or GIF under 200KB). (How it displays depends on the phone it's saved to.)</p>
 
   <p>To fill in a gap the directory doesn't have, or see what's on your card now:</p>
   <a class="btn" href="https://v3.crdlnk.io/portal">Open the employee portal →</a>
 </main>
-<footer class="site">CardLink KB    <div class="updated">Last updated: 2026-10-12</div>
+<footer class="site">CardLink KB
+  <div class="updated">Last updated: 2026-10-13</div>
 </footer>
 <script src="/theme-switcher.js"></script>
 <script src="/search.js" defer></script>

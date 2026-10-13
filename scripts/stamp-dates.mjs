@@ -17,18 +17,28 @@ function sh(cmd) {
 }
 
 const statusOut = sh(`git status --porcelain -- ${PUBLIC_DIR}`);
+// Porcelain lines are "XY path" — a fixed 3-char status prefix, then the
+// path. Don't trim the line before slicing it off: a common " M path"
+// line has a leading space that's PART of the 3-char prefix, and
+// trimming it first shifts slice(3) one character into the path.
 const dirty = new Set(
   statusOut
     .split("\n")
-    .map((l) => l.trim())
-    .filter(Boolean)
+    .filter((l) => l.length > 3)
     .map((l) => l.slice(3).trim()),
 );
 
-const today = new Date().toISOString().slice(0, 10);
+// Local calendar date, matching `git log --date=short`'s default (the
+// committer's local timezone) — not toISOString(), which is UTC and can
+// disagree with git across a timezone's midnight.
+const now = new Date();
+const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
 const files = readdirSync(PUBLIC_DIR).filter((f) => f.endsWith(".html"));
 
-const stampRe = /<div class="updated">Last updated: [\d-]+<\/div>\s*/;
+// Matches the div AND any whitespace before it, so a re-run always
+// normalizes to one canonical leading newline + indent instead of
+// accumulating extra whitespace each time.
+const stampRe = /\s*<div class="updated">Last updated: [\d-]+<\/div>/;
 
 let changed = 0;
 for (const file of files) {
@@ -47,11 +57,11 @@ for (const file of files) {
   }
 
   const html = readFileSync(relPath, "utf8");
-  const stampHtml = `  <div class="updated">Last updated: ${date}</div>\n`;
+  const stampHtml = `\n  <div class="updated">Last updated: ${date}</div>`;
 
   const next = stampRe.test(html)
     ? html.replace(stampRe, stampHtml)
-    : html.replace(/<\/footer>/, `${stampHtml}</footer>`);
+    : html.replace(/<\/footer>/, `${stampHtml}\n</footer>`);
 
   if (next !== html) {
     writeFileSync(relPath, next);
